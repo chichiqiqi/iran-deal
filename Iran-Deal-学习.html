@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump hints at deal with Iran - 外刊精读</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #495057;
+            --text-muted: #6c757d;
+            --accent: #4361ee;
+            --accent-light: #e8edff;
+            --border: #dee2e6;
+            --highlight: #fff3cd;
+            --success: #198754;
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --bg-tertiary: #0f3460;
+            --text-primary: #eaeaea;
+            --text-secondary: #b8b8b8;
+            --text-muted: #888888;
+            --accent: #4cc9f0;
+            --accent-light: #1a3a4a;
+            --border: #2d3748;
+            --highlight: #4a4000;
+            --shadow: rgba(0,0,0,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .theme-toggle {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        section h2 {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .article-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .meta-item {
+            padding: 10px 15px;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+
+        .meta-item strong {
+            color: var(--accent);
+        }
+
+        .summary-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            padding: 15px;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .key-points {
+            list-style: none;
+        }
+
+        .key-points li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .key-points li::before {
+            content: "→";
+            position: absolute;
+            left: 15px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .paragraph-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .paragraph-num {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .original-text {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            padding: 15px;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .translation {
+            padding: 15px;
+            background-color: var(--accent-light);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .translation.hidden {
+            background-color: var(--bg-tertiary);
+            color: transparent;
+            user-select: none;
+        }
+
+        .translation.hidden::after {
+            content: "👆 点击显示译文";
+            color: var(--text-muted);
+            display: block;
+            text-align: center;
+        }
+
+        .analysis {
+            padding: 15px;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            border: 1px dashed var(--border);
+        }
+
+        .analysis h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .analysis ul {
+            margin-left: 20px;
+        }
+
+        .analysis li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .vocab-word {
+            background-color: var(--highlight);
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: help;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .vocab-word:hover::after {
+            content: attr(data-definition);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            z-index: 100;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .vocab-table th,
+        .vocab-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .vocab-table th {
+            background-color: var(--accent);
+            color: white;
+            font-weight: 600;
+        }
+
+        .vocab-table tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+
+        .vocab-table td:first-child {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .expression-card {
+            padding: 20px;
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+        }
+
+        .expression-card h4 {
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .expression-card p {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        .expression-card strong {
+            color: var(--text-primary);
+        }
+
+        .quiz-item {
+            padding: 20px;
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid var(--border);
+        }
+
+        .quiz-item h4 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .quiz-answer {
+            padding: 15px;
+            background-color: var(--success);
+            color: white;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .quiz-answer.show {
+            display: block;
+        }
+
+        .show-answer-btn {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 2px solid var(--border);
+        }
+
+        .background-content {
+            padding: 20px;
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .background-content h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .background-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .background-content p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        .stat-card .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            header h1 {
+                font-size: 1.4rem;
+                margin-right: 0;
+            }
+
+            .controls {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .vocab-table {
+                font-size: 0.85rem;
+            }
+
+            .vocab-table th,
+            .vocab-table td {
+                padding: 8px 10px;
+            }
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background-color: var(--accent);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            padding: 10px 20px;
+            background-color: var(--bg-tertiary);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .nav-tab.active {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .nav-tab:hover:not(.active) {
+            background-color: var(--border);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <div class="container">
+        <header>
+            <h1>🌍 Trump says Iran 'talking to' US and hints at deal to avoid military strikes</h1>
+            <div class="controls">
+                <button class="btn" id="toggleTranslation">隐藏译文</button>
+                <button class="btn btn-outline" id="testMode">自测模式</button>
+                <button class="btn theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-section="all">全部</button>
+            <button class="nav-tab" data-section="article-info">文章信息</button>
+            <button class="nav-tab" data-section="intensive-reading">逐段精读</button>
+            <button class="nav-tab" data-section="vocabulary">词汇表</button>
+            <button class="nav-tab" data-section="expressions">地道表达</button>
+            <button class="nav-tab" data-section="quiz">自测题</button>
+        </nav>
+
+        <section id="article-info">
+            <h2>📰 文章信息</h2>
+            <div class="article-meta">
+                <div class="meta-item"><strong>来源：</strong>The Guardian</div>
+                <div class="meta-item"><strong>作者：</strong>Agence France-Presse (AFP)</div>
+                <div class="meta-item"><strong>日期：</strong>2026年1月31日</div>
+                <div class="meta-item"><strong>原文：</strong><a href="https://www.theguardian.com/world/2026/jan/31/trump-hints-at-deal-with-iran-to-avoid-military-strikes" target="_blank" style="color: var(--accent);">查看原文 ↗</a></div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">23</div>
+                    <div class="label">段落数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">12</div>
+                    <div class="label">重点词汇</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">5</div>
+                    <div class="label">地道表达</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">5</div>
+                    <div class="label">自测题</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="summary">
+            <h2>📝 文章摘要</h2>
+            <div class="summary-text">
+                特朗普总统暗示美国正与伊朗进行谈判，可能达成协议以避免军事打击。美国已部署以"亚伯拉罕·林肯"号航母为首的海军战斗群前往伊朗海域，此前特朗普曾威胁要对伊朗镇压反政府抗议活动进行干预。伊朗方面表示愿意进行核谈判，但前提是导弹和防御能力不在议程之内。与此同时，卡塔尔首相访问伊朗试图缓和地区紧张局势，而伊朗军方警告美国和以色列不要发动任何攻击。
+            </div>
+        </section>
+
+        <section id="key-points">
+            <h2>🧠 核心论点</h2>
+            <ul class="key-points">
+                <li><strong>美伊谈判进行中：</strong>特朗普声称伊朗正在与美国"对话"，暗示可能达成协议避免军事冲突</li>
+                <li><strong>军事威慑与外交并行：</strong>美国在部署航母战斗群的同时，保持谈判渠道开放</li>
+                <li><strong>伊朗的底线：</strong>伊朗愿意进行核谈判，但拒绝将导弹和防御能力纳入议程</li>
+                <li><strong>地区斡旋努力：</strong>卡塔尔等地区国家积极介入，试图缓和紧张局势</li>
+                <li><strong>人道主义危机：</strong>伊朗国内抗议活动导致大量伤亡，官方与人权组织的死亡数字差异巨大</li>
+            </ul>
+        </section>
+
+        <section id="intensive-reading">
+            <h2>📖 逐段精读</h2>
+            
+            <div class="paragraph-block">
+                <span class="paragraph-num">1</span>
+                <div class="original-text">
+                    Donald Trump has said Iran is "talking to" the US and <span class="vocab-word" data-definition="hint at: 暗示">hinted at</span> a deal to avoid the use of military strikes.
+                </div>
+                <div class="translation">
+                    唐纳德·特朗普表示伊朗正在与美国"对话"，并暗示可能达成协议以避免使用军事打击。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>hint at</strong>: 暗示，含蓄地表示。常用搭配：hint at a possibility</li>
+                        <li><strong>deal</strong>: 在政治语境中指"协议、交易"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">2</span>
+                <div class="original-text">
+                    "[Iran is] talking to us, and we'll see if we can do something, otherwise we'll see what happens … We have a big <span class="vocab-word" data-definition="fleet: 舰队">fleet</span> heading out there," he told Fox News. "They are negotiating."
+                </div>
+                <div class="translation">
+                    "（伊朗）正在与我们对话，我们看看能否做些什么，否则就走着瞧……我们有一支大型舰队正在前往那里，"他告诉福克斯新闻。"他们正在谈判。"
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>we'll see what happens</strong>: 口语化表达，意为"走着瞧"，带有威胁意味</li>
+                        <li><strong>fleet</strong>: 舰队，海军编队</li>
+                        <li><strong>heading out there</strong>: head 作动词表示"前往"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">3</span>
+                <div class="original-text">
+                    Trump added that US allies in the region were not being told of plans for possible strikes due to security reasons. He has threatened to intervene in Iran <span class="vocab-word" data-definition="in the wake of: 在……之后">in the wake of</span> a deadly <span class="vocab-word" data-definition="crackdown: 镇压、打击">crackdown</span> on anti-government protests.
+                </div>
+                <div class="translation">
+                    特朗普补充说，出于安全原因，美国在该地区的盟友没有被告知可能的打击计划。此前，他曾威胁要在伊朗对反政府抗议活动进行致命镇压后进行干预。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>in the wake of</strong>: 在……之后，紧随……而来。wake 原意是船只航行后留下的尾流</li>
+                        <li><strong>crackdown</strong>: 镇压、打击，常与 on 搭配</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">4</span>
+                <div class="original-text">
+                    Washington has <span class="vocab-word" data-definition="deploy: 部署">deployed</span> a naval battle group led by the USS Abraham Lincoln aircraft carrier off Iran's shores, after Trump threatened to intervene in response to a deadly crackdown on anti-government protests.
+                </div>
+                <div class="translation">
+                    在特朗普威胁要对致命镇压反政府抗议活动进行干预后，华盛顿已部署了一支以"亚伯拉罕·林肯"号航空母舰为首的海军战斗群，驻扎在伊朗海岸附近。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>deploy</strong>: 部署（军事力量），正式军事用语</li>
+                        <li><strong>naval battle group</strong>: 海军战斗群</li>
+                        <li><strong>USS</strong>: United States Ship 的缩写</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">5</span>
+                <div class="original-text">
+                    The Qatari premier, Sheikh Mohammed bin Abdulrahman Al Thani, who also serves as foreign minister, held talks in Iran on Saturday to try to "<span class="vocab-word" data-definition="de-escalate: 缓和">de-escalate</span> tensions in the region", the kingdom's foreign ministry said.
+                </div>
+                <div class="translation">
+                    卡塔尔首相兼外交大臣谢赫·穆罕默德·本·阿卜杜拉赫曼·阿勒萨尼周六在伊朗举行会谈，试图"缓和该地区的紧张局势"，该王国外交部表示。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>premier</strong>: 首相、总理</li>
+                        <li><strong>de-escalate</strong>: 缓和、降级（紧张局势）</li>
+                        <li><strong>Sheikh</strong>: 谢赫，阿拉伯国家对王室成员的尊称</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">6</span>
+                <div class="original-text">
+                    The arrival of the <span class="vocab-word" data-definition="flotilla: 小型舰队">flotilla</span> has raised fears of a direct <span class="vocab-word" data-definition="confrontation: 对抗、冲突">confrontation</span> with Iran, which has warned it would respond with missile strikes on US bases, ships and allies – notably Israel – <span class="vocab-word" data-definition="in the event of: 如果发生">in the event of</span> an attack.
+                </div>
+                <div class="translation">
+                    舰队的到来引发了人们对与伊朗直接对抗的担忧。伊朗警告称，如果遭到攻击，将对美国基地、舰艇和盟友——尤其是以色列——发动导弹打击。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>flotilla</strong>: 小型舰队，比 fleet 规模小</li>
+                        <li><strong>confrontation</strong>: 直接对抗、正面冲突</li>
+                        <li><strong>in the event of</strong>: 如果发生……，万一……</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">7</span>
+                <div class="original-text">
+                    But Trump has said he believes Iran will prefer to make a deal over its nuclear and missile programmes rather than face American military action – and Tehran has said it is ready for nuclear talks if its missiles and defence capabilities are not on the agenda.
+                </div>
+                <div class="translation">
+                    但特朗普表示，他相信伊朗会更愿意就其核计划和导弹计划达成协议，而不是面对美国的军事行动——而德黑兰方面表示，如果导弹和防御能力不在议程之内，它已准备好进行核谈判。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>prefer to... rather than</strong>: 宁愿……而不愿……</li>
+                        <li><strong>Tehran</strong>: 德黑兰，代指伊朗政府（借代修辞）</li>
+                        <li><strong>on the agenda</strong>: 在议程上</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">8</span>
+                <div class="original-text">
+                    "<span class="vocab-word" data-definition="contrary to: 与……相反">Contrary to</span> the hype of the contrived media war, structural arrangements for negotiations are progressing," said Larijani, a day after the Kremlin said Larijani held talks in Moscow with the Russian president, Vladimir Putin.
+                </div>
+                <div class="translation">
+                    "与人为制造的媒体战炒作相反，谈判的结构性安排正在推进，"拉里贾尼说。此前一天，克里姆林宫表示拉里贾尼在莫斯科与俄罗斯总统弗拉基米尔·普京举行了会谈。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>contrary to</strong>: 与……相反</li>
+                        <li><strong>hype</strong>: 炒作、大肆宣传（贬义）</li>
+                        <li><strong>contrived</strong>: 人为的、刻意制造的</li>
+                        <li><strong>the Kremlin</strong>: 克里姆林宫，代指俄罗斯政府</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">9</span>
+                <div class="original-text">
+                    "The Islamic Republic of Iran has never sought, and in no way seeks, war and it is firmly convinced that a war would be in the interest of neither Iran, nor the United States, nor the region," he said in a call with his Egyptian <span class="vocab-word" data-definition="counterpart: 对等的人">counterpart</span>, Abdel Fatah al-Sisi.
+                </div>
+                <div class="translation">
+                    "伊朗伊斯兰共和国从未寻求、也绝不寻求战争，并且坚信战争既不符合伊朗的利益，也不符合美国的利益，更不符合该地区的利益，"他在与埃及总统阿卜杜勒·法塔赫·塞西通话时表示。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>in no way</strong>: 绝不、决不，强调否定</li>
+                        <li><strong>firmly convinced</strong>: 坚信</li>
+                        <li><strong>counterpart</strong>: 对等的人，此处指"同级别的领导人"</li>
+                        <li><strong>neither... nor... nor...</strong>: 既不……也不……也不……</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">10</span>
+                <div class="original-text">
+                    Iran's army chief, Amir Hatami, had earlier warned the US and Israel against any attack, saying his forces were "at full defensive and military readiness" to respond.
+                </div>
+                <div class="translation">
+                    伊朗军队总司令阿米尔·哈塔米此前警告美国和以色列不要发动任何攻击，称其部队已处于"全面防御和军事戒备状态"，随时准备作出回应。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>army chief</strong>: 军队总司令</li>
+                        <li><strong>warn... against</strong>: 警告……不要做某事</li>
+                        <li><strong>at full readiness</strong>: 处于完全戒备状态</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">11</span>
+                <div class="original-text">
+                    With tensions heightened, Iranian authorities rushed to deny that several incidents on Saturday were linked to any attack or <span class="vocab-word" data-definition="sabotage: 蓄意破坏">sabotage</span>, including an explosion in the southern Iranian port city of Bandar Abbas that local firefighters said was caused by a gas leak.
+                </div>
+                <div class="translation">
+                    在紧张局势加剧之际，伊朗当局急忙否认周六发生的几起事件与任何攻击或破坏活动有关，包括伊朗南部港口城市阿巴斯港发生的一起爆炸——当地消防员称是由天然气泄漏引起的。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>with tensions heightened</strong>: 独立主格结构，表示伴随状态</li>
+                        <li><strong>sabotage</strong>: 蓄意破坏、破坏活动</li>
+                        <li><strong>rush to deny</strong>: 急忙否认</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">12</span>
+                <div class="original-text">
+                    It <span class="vocab-word" data-definition="draw criticism: 招致批评">drew criticism</span> from Iran's foreign minister, Abbas Araghchi. "Operating off our shores, the US military is now attempting to dictate how our Powerful Armed Forces should conduct target practice in their own turf," he wrote on X.
+                </div>
+                <div class="translation">
+                    这招致了伊朗外交部长阿巴斯·阿拉格奇的批评。"美军在我们的海岸附近活动，现在却试图指挥我们强大的武装力量应该如何在自己的地盘上进行射击训练，"他在 X 平台上写道。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>draw criticism</strong>: 招致批评</li>
+                        <li><strong>dictate</strong>: 命令、指挥（带有贬义）</li>
+                        <li><strong>turf</strong>: 地盘、势力范围（非正式用语）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">13</span>
+                <div class="original-text">
+                    The US <span class="vocab-word" data-definition="designate: 指定、命名">designated</span> the Revolutionary Guards a terrorist organisation in 2019, a move the European Union followed on Thursday, prompting angry reactions from Tehran.
+                </div>
+                <div class="translation">
+                    美国于2019年将革命卫队列为恐怖组织，欧盟于周四跟进了这一举措，引发了德黑兰的愤怒反应。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>designate... as</strong>: 将……指定为、列为</li>
+                        <li><strong>a move</strong>: 此处指代前面提到的行动</li>
+                        <li><strong>prompt</strong>: 引发、促使</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">14</span>
+                <div class="original-text">
+                    Nationwide protests against the rising cost of living then <span class="vocab-word" data-definition="erupt: 爆发">erupted</span> on 28 December, before turning into a broader anti-government movement that peaked on 8 and 9 January in what authorities called "riots" and blamed on the US and Israel.
+                </div>
+                <div class="translation">
+                    随后，反对生活成本上涨的全国性抗议活动于12月28日爆发，之后演变为更广泛的反政府运动，并于1月8日和9日达到顶峰——当局称之为"骚乱"，并将其归咎于美国和以色列。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>erupt</strong>: 爆发（用于描述突发事件）</li>
+                        <li><strong>turn into</strong>: 演变为、转变为</li>
+                        <li><strong>peak</strong>: 达到顶峰（动词用法）</li>
+                        <li><strong>blame... on</strong>: 将……归咎于</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">15</span>
+                <div class="original-text">
+                    The official death toll from the authorities stands at 3,117. However, the US-based Human Rights Activists News Agency said it had confirmed 6,563 deaths, including 6,170 protesters and 124 children.
+                </div>
+                <div class="translation">
+                    当局公布的官方死亡人数为3,117人。然而，总部位于美国的人权活动人士新闻机构表示，已确认6,563人死亡，其中包括6,170名抗议者和124名儿童。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>death toll</strong>: 死亡人数</li>
+                        <li><strong>stand at</strong>: （数字）为、达到</li>
+                        <li><strong>US-based</strong>: 总部位于美国的</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="paragraph-block">
+                <span class="paragraph-num">16</span>
+                <div class="original-text">
+                    On Saturday, Pezeshkian urged his government to <span class="vocab-word" data-definition="heed: 注意、听从">heed</span> public <span class="vocab-word" data-definition="grievances: 不满、抱怨">grievances</span> after the demonstrations and "serve the people".
+                </div>
+                <div class="translation">
+                    周六，佩泽什基安敦促其政府在示威活动后倾听公众的不满，并"为人民服务"。
+                </div>
+                <div class="analysis">
+                    <h4>难点解析</h4>
+                    <ul>
+                        <li><strong>urge</strong>: 敦促、力劝</li>
+                        <li><strong>heed</strong>: 注意、听从（正式用语）</li>
+                        <li><strong>grievances</strong>: 不满、抱怨</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="vocabulary">
+            <h2>📚 重点词汇表</h2>
+            <table class="vocab-table">
+                <thead>
+                    <tr>
+                        <th>单词</th>
+                        <th>音标</th>
+                        <th>释义</th>
+                        <th>例句</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>hint at</td>
+                        <td>/hɪnt æt/</td>
+                        <td>暗示</td>
+                        <td>The president hinted at a possible agreement.</td>
+                    </tr>
+                    <tr>
+                        <td>deploy</td>
+                        <td>/dɪˈplɔɪ/</td>
+                        <td>部署</td>
+                        <td>The military deployed troops to the border.</td>
+                    </tr>
+                    <tr>
+                        <td>crackdown</td>
+                        <td>/ˈkrækdaʊn/</td>
+                        <td>镇压、打击</td>
+                        <td>The government launched a crackdown on protests.</td>
+                    </tr>
+                    <tr>
+                        <td>de-escalate</td>
+                        <td>/diːˈeskəleɪt/</td>
+                        <td>缓和（紧张局势）</td>
+                        <td>Both sides agreed to de-escalate tensions.</td>
+                    </tr>
+                    <tr>
+                        <td>flotilla</td>
+                        <td>/fləˈtɪlə/</td>
+                        <td>小型舰队</td>
+                        <td>A flotilla of warships approached the coast.</td>
+                    </tr>
+                    <tr>
+                        <td>confrontation</td>
+                        <td>/ˌkɒnfrʌnˈteɪʃn/</td>
+                        <td>对抗、冲突</td>
+                        <td>They want to avoid a military confrontation.</td>
+                    </tr>
+                    <tr>
+                        <td>counterpart</td>
+                        <td>/ˈkaʊntəpɑːt/</td>
+                        <td>对等的人、对应物</td>
+                        <td>She met with her Chinese counterpart.</td>
+                    </tr>
+                    <tr>
+                        <td>sabotage</td>
+                        <td>/ˈsæbətɑːʒ/</td>
+                        <td>蓄意破坏</td>
+                        <td>The explosion was not caused by sabotage.</td>
+                    </tr>
+                    <tr>
+                        <td>designate</td>
+                        <td>/ˈdezɪɡneɪt/</td>
+                        <td>指定、命名</td>
+                        <td>The group was designated a terrorist organization.</td>
+                    </tr>
+                    <tr>
+                        <td>grievance</td>
+                        <td>/ˈɡriːvəns/</td>
+                        <td>不满、抱怨</td>
+                        <td>The government must address public grievances.</td>
+                    </tr>
+                    <tr>
+                        <td>erupt</td>
+                        <td>/ɪˈrʌpt/</td>
+                        <td>爆发</td>
+                        <td>Protests erupted across the country.</td>
+                    </tr>
+                    <tr>
+                        <td>heed</td>
+                        <td>/hiːd/</td>
+                        <td>注意、听从</td>
+                        <td>Leaders should heed the warnings.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="expressions">
+            <h2>🗣️ 地道表达与高级句型</h2>
+            
+            <div class="expression-card">
+                <h4>1. in the wake of</h4>
+                <p><strong>原句：</strong>He has threatened to intervene in Iran in the wake of a deadly crackdown on anti-government protests.</p>
+                <p><strong>解析：</strong>"in the wake of" 意为"在……之后"，源自航海术语（船只航行后留下的尾流）。比 "after" 更正式，常用于描述重大事件后的连锁反应。</p>
+                <p><strong>仿写：</strong>In the wake of the financial crisis, many banks collapsed.</p>
+            </div>
+
+            <div class="expression-card">
+                <h4>2. in the event of</h4>
+                <p><strong>原句：</strong>Iran has warned it would respond with missile strikes... in the event of an attack.</p>
+                <p><strong>解析：</strong>"in the event of" 意为"如果发生……、万一……"，是正式的条件表达，常用于法律、外交和商业文本。</p>
+                <p><strong>仿写：</strong>In the event of an emergency, please use the nearest exit.</p>
+            </div>
+
+            <div class="expression-card">
+                <h4>3. prefer to... rather than</h4>
+                <p><strong>原句：</strong>Trump has said he believes Iran will prefer to make a deal... rather than face American military action.</p>
+                <p><strong>解析：</strong>表示"宁愿……而不愿……"，强调在两个选项中的偏好。注意 rather than 后接动词原形。</p>
+                <p><strong>仿写：</strong>Most companies prefer to negotiate rather than go to court.</p>
+            </div>
+
+            <div class="expression-card">
+                <h4>4. contrary to</h4>
+                <p><strong>原句：</strong>Contrary to the hype of the contrived media war, structural arrangements for negotiations are progressing.</p>
+                <p><strong>解析：</strong>"contrary to" 意为"与……相反"，用于反驳或对比。常用于正式写作和辩论。</p>
+                <p><strong>仿写：</strong>Contrary to popular belief, the economy is actually improving.</p>
+            </div>
+
+            <div class="expression-card">
+                <h4>5. draw criticism</h4>
+                <p><strong>原句：</strong>It drew criticism from Iran's foreign minister.</p>
+                <p><strong>解析：</strong>"draw criticism" 意为"招致批评"，draw 在此表示"引起、招来"。类似搭配：draw attention、draw fire。</p>
+                <p><strong>仿写：</strong>The new policy drew criticism from opposition parties.</p>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <h2>❓ 阅读理解自测</h2>
+            
+            <div class="quiz-item">
+                <h4>Question 1: What military asset has the US deployed near Iran?</h4>
+                <button class="btn show-answer-btn" onclick="toggleAnswer(this)">显示答案</button>
+                <div class="quiz-answer">
+                    The US has deployed a naval battle group led by the USS Abraham Lincoln aircraft carrier off Iran's shores.
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <h4>Question 2: Why did Trump say he couldn't share military plans with US allies in the region?</h4>
+                <button class="btn show-answer-btn" onclick="toggleAnswer(this)">显示答案</button>
+                <div class="quiz-answer">
+                    Trump said it was due to security reasons, implying that sharing the plans could compromise the operation.
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <h4>Question 3: What is Iran's condition for engaging in nuclear talks?</h4>
+                <button class="btn show-answer-btn" onclick="toggleAnswer(this)">显示答案</button>
+                <div class="quiz-answer">
+                    Iran said it is ready for nuclear talks only if its missiles and defence capabilities are not on the agenda.
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <h4>Question 4: What is the discrepancy between the official death toll and the figure reported by human rights groups?</h4>
+                <button class="btn show-answer-btn" onclick="toggleAnswer(this)">显示答案</button>
+                <div class="quiz-answer">
+                    The official death toll from Iranian authorities stands at 3,117, while the US-based Human Rights Activists News Agency reported 6,563 confirmed deaths, including 6,170 protesters and 124 children.
+                </div>
+            </div>
+
+            <div class="quiz-item">
+                <h4>Question 5: What is the strategic significance of the Strait of Hormuz mentioned in the article?</h4>
+                <button class="btn show-answer-btn" onclick="toggleAnswer(this)">显示答案</button>
+                <div class="quiz-answer">
+                    The Strait of Hormuz is described as "a key transit hub for global energy supplies," meaning it's crucial for the transportation of oil and gas from the Persian Gulf to global markets.
+                </div>
+            </div>
+        </section>
+
+        <section id="background">
+            <h2>🔗 背景知识补充</h2>
+            <div class="background-content">
+                <h3>1. 美伊关系历史</h3>
+                <p>美国与伊朗的紧张关系可追溯至1979年伊朗伊斯兰革命，当时亲美的巴列维王朝被推翻，随后发生了美国大使馆人质危机。2015年，伊朗与六国（美、英、法、德、俄、中）达成《伊核协议》(JCPOA)，但特朗普于2018年单方面退出该协议并重新实施制裁。</p>
+
+                <h3>2. 伊朗革命卫队 (IRGC)</h3>
+                <p>伊朗伊斯兰革命卫队成立于1979年，是伊朗最精锐的军事力量，独立于正规军，直接向最高领袖负责。2019年，美国将其列为"外国恐怖组织"，这是美国首次将一国政府的正式军事力量列入恐怖组织名单。</p>
+
+                <h3>3. 霍尔木兹海峡</h3>
+                <p>霍尔木兹海峡位于波斯湾与阿曼湾之间，最窄处仅约33公里。全球约20%的石油贸易通过该海峡运输，使其成为世界上最重要的能源运输通道之一。伊朗曾多次威胁在遭受攻击时封锁该海峡。</p>
+
+                <h3>4. 2026年伊朗抗议活动</h3>
+                <p>文章提到的抗议活动始于2025年12月28日，起因是生活成本上涨，后演变为反政府运动。官方与人权组织对死亡人数的统计存在巨大差异（3,117 vs 6,563），反映了信息透明度和人权状况的争议。</p>
+
+                <h3>5. 地区外交斡旋</h3>
+                <p>卡塔尔在美伊之间长期扮演调解角色，因其与双方都保持着相对良好的关系。卡塔尔首相此次访问伊朗是地区国家试图避免冲突升级的外交努力的一部分。</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+            }
+        });
+
+        // Translation Toggle
+        const toggleTranslation = document.getElementById('toggleTranslation');
+        const translations = document.querySelectorAll('.translation');
+        let translationsHidden = false;
+
+        toggleTranslation.addEventListener('click', () => {
+            translationsHidden = !translationsHidden;
+            translations.forEach(t => {
+                t.classList.toggle('hidden', translationsHidden);
+            });
+            toggleTranslation.textContent = translationsHidden ? '显示译文' : '隐藏译文';
+        });
+
+        // Test Mode
+        const testMode = document.getElementById('testMode');
+        let inTestMode = false;
+
+        testMode.addEventListener('click', () => {
+            inTestMode = !inTestMode;
+            translations.forEach(t => {
+                t.classList.toggle('hidden', inTestMode);
+            });
+            testMode.classList.toggle('btn-outline', !inTestMode);
+            testMode.textContent = inTestMode ? '退出自测' : '自测模式';
+            toggleTranslation.textContent = inTestMode ? '显示译文' : '隐藏译文';
+            translationsHidden = inTestMode;
+        });
+
+        // Click to reveal translation
+        translations.forEach(t => {
+            t.addEventListener('click', () => {
+                if (t.classList.contains('hidden')) {
+                    t.classList.remove('hidden');
+                }
+            });
+        });
+
+        // Quiz Answer Toggle
+        function toggleAnswer(btn) {
+            const answer = btn.nextElementSibling;
+            answer.classList.toggle('show');
+            btn.textContent = answer.classList.contains('show') ? '隐藏答案' : '显示答案';
+        }
+
+        // Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+
+        // Navigation Tabs
+        const navTabs = document.querySelectorAll('.nav-tab');
+        const sections = document.querySelectorAll('section');
+
+        navTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-section');
+                
+                navTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                if (target === 'all') {
+                    sections.forEach(s => s.style.display = 'block');
+                } else {
+                    sections.forEach(s => {
+                        if (s.id === target || s.id === 'summary' || s.id === 'key-points' || s.id === 'background') {
+                            s.style.display = s.id === target || target === 'all' ? 'block' : 'none';
+                        } else {
+                            s.style.display = s.id === target ? 'block' : 'none';
+                        }
+                    });
+                    
+                    // Special handling for article-info to show summary and key-points
+                    if (target === 'article-info') {
+                        document.getElementById('article-info').style.display = 'block';
+                        document.getElementById('summary').style.display = 'block';
+                        document.getElementById('key-points').style.display = 'block';
+                        document.getElementById('intensive-reading').style.display = 'none';
+                        document.getElementById('vocabulary').style.display = 'none';
+                        document.getElementById('expressions').style.display = 'none';
+                        document.getElementById('quiz').style.display = 'none';
+                        document.getElementById('background').style.display = 'none';
+                    } else if (target === 'intensive-reading') {
+                        sections.forEach(s => s.style.display = 'none');
+                        document.getElementById('intensive-reading').style.display = 'block';
+                    } else if (target === 'vocabulary') {
+                        sections.forEach(s => s.style.display = 'none');
+                        document.getElementById('vocabulary').style.display = 'block';
+                    } else if (target === 'expressions') {
+                        sections.forEach(s => s.style.display = 'none');
+                        document.getElementById('expressions').style.display = 'block';
+                    } else if (target === 'quiz') {
+                        sections.forEach(s => s.style.display = 'none');
+                        document.getElementById('quiz').style.display = 'block';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
